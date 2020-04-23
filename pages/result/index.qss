@@ -1,0 +1,40 @@
+.result-page {
+  background: salmon;
+  height: 100%; }
+
+.result-button {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #e5004f;
+  color: #fff;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 30rpx;
+  text-align: center; }
+  .result-button-group {
+    display: flex;
+    position: fixed;
+    bottom: 20rpx;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40rpx; }
+
+.result-qrcode {
+  position: fixed;
+  display: flex;
+  bottom: 100rpx;
+  height: 150rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background: darkseagreen;
+  align-items: center; }
+  .result-qrcode-text {
+    font-size: 26rpx;
+    color: #fff;
+    flex: 1;
+    padding-left: 100rpx; }
+  .result-qrcode-image {
+    flex-basis: 150rpx;
+    background: gold;
+    height: 100%; }

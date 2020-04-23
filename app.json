@@ -1,0 +1,15 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/starquestion/index",
+		"pages/customquestion/index",
+		"pages/starList/index",
+		"pages/result/index"
+	],
+	"networkTimeout": {
+		"request": 10000
+	},
+	"window": {
+		"navigationStyle": "custom"
+	}
+}

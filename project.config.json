@@ -1,0 +1,68 @@
+{
+	"projectid": "1108100302_%E6%87%82%E6%88%91%E7%99%BE%E5%88%86%E7%99%BE",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"remoteDebugLogEnable": false,
+		"uploadWithSourceMap": true,
+		"nodeModules": true,
+		"uglifyFileName": true
+	},
+	"qqLibVersion": "1.10.1",
+	"compileType": "miniprogram",
+	"createTime": 1584150646925,
+	"accessTime": 1584150646925,
+	"packOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"qqappid": "1108100302",
+	"projectname": "%E6%87%82%E6%88%91%E7%99%BE%E5%88%86%E7%99%BE",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "question",
+					"pathName": "pages/starquestion/index",
+					"query": "id=232",
+					"scene": ""
+				},
+				{
+					"id": -1,
+					"name": "result",
+					"pathName": "pages/result/index",
+					"query": "score=80",
+					"scene": ""
+				}
+			]
+		}
+	}
+}
