@@ -4,7 +4,7 @@
         background: {
             image: url('https://ilmsf-1257950182.cos.ap-chengdu.myqcloud.com/datibg.png');
             repeat: repeat-y;
-            size: cover;
+            size: 100% 100%;
         }
     }
     &-item {

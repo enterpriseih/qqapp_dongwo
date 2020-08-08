@@ -1,57 +1,38 @@
 .page-index {
-  background: orange;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .page-index .start-btn {
-    width: 200rpx;
-    height: 60rpx;
-    text-align: center;
-    border-radius: 10px;
-    background: yellow; }
+  position: relative;
+  flex-direction: column;
+}
 
-.modal-container-header, .modal-container-content, .modal-container-foot {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+.page-index .start-btn {
+  position: absolute;
+  width: 80vw;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1px solid #e1963b;
+  border-radius: 30rpx;
+  background: #f5c247;
+  box-shadow: 0px 15px 15px #f7d15c inset, 1px 2px 2px #e0943a;
+  color: #ab5328;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.modal {
-  display: none;
+.page-index .title {
+  font-size: 80rpx;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px currentColor,-1px -1px 1px #030,0 -1px 1px #030,1px -1px 1px #030,1px 0 1px #030,1px 1px 1px #030,0 1px 1px #030,-1px 1px 1px #030,-1px 0 1px #030;
+  color: #c28041;
+}
+
+.page-index .img {
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3); }
-  .modal-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #ffffff;
-    width: 50%;
-    height: 40vh;
-    display: grid;
-    grid-template-rows: 100rpx 200rpx auto;
-    grid-template-areas: 'header' 'content' 'foot'; }
-    .modal-container-header {
-      grid-area: header;
-      background: red; }
-    .modal-container-content {
-      grid-area: content;
-      flex-direction: column;
-      background: orange; }
-      .modal-container-content__btn {
-        color: #fff;
-        font-size: 24rpx;
-        width: 150rpx;
-        height: 50rpx;
-        line-height: 50rpx;
-        text-align: center;
-        margin-bottom: 30rpx;
-        background: #230192;
-        box-shadow: 1px 2px #000; }
-    .modal-container-foot {
-      grid-area: foot;
-      background: gray; }
+  width: 100%;
+  height: 100%;
+}

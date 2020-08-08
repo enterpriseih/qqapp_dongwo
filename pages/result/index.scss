@@ -1,0 +1,56 @@
+.result {
+    &-page {
+        background: rgb(194,219,224);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-score {
+        font-size: 32rpx;
+        line-height: 80rpx;
+        color: rgb(210,51,216);
+    }
+    &-desc {
+        font-size: 32rpx;
+        line-height: 80rpx;
+        color: rgb(9,10,219);
+    }
+    &-nickname {
+        font-size: 60rpx;
+        line-height: 100rpx;
+        color: rgb(245, 35, 16);
+    }
+    &-qrcode {
+        margin-top: 30rpx;
+        margin-bottom: 30rpx;
+        // padding: 50rpx;
+        background: #fff;
+        border-radius: 20%;
+        overflow: hidden;
+        image {
+            width: 250rpx;
+            height: 250rpx;
+        }
+        &-desc {
+            color: rgb(15,32,37);
+            font-size: 24rpx;
+            margin-bottom: 50rpx;
+        }
+    }
+    &-share, &-retest {
+        font-size: 34rpx;
+        width: 60vw;
+        height: 80rpx;
+        line-height: 80rpx;
+        background: rgb(217,70,37);
+        color: #fff;
+        text-align: center;
+        border-radius: 20rpx;
+        margin-top: 30rpx;
+    }
+    &-retest {
+        background: rgb(239,176,71);
+    }
+}

@@ -1,8 +1,9 @@
 .list-page {
+  min-height: 100%;
   padding: 100rpx 40rpx 40rpx;
   background-image: url("https://ilmsf-1257950182.cos.ap-chengdu.myqcloud.com/datibg.png");
   background-repeat: repeat-y;
-  background-size: cover; }
+  background-size: 100% 100%; }
 
 .list-item {
   display: flex;

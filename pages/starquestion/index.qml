@@ -36,10 +36,12 @@
                         qq:for="{{item.options}}"
                         qq:for-item="option"
                         qq:key="index"
+                        qq:if="{{option}}"
                         class="question-exam_content_item_options_item"
                         bind:tap="selectAnswer"
                         data-index="{{index}}"
-                        data-right="{{item.right}}"
+                        data-score="{{item.score}}"
+                        data-answer="{{item.answer}}"
                     >{{option}}</view>
                 </view>
             </view>

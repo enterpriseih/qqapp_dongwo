@@ -1,40 +1,61 @@
 .result-page {
-  background: salmon;
-  height: 100%; }
+  background: #c2dbe0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
-.result-button {
-  flex: 1;
-  height: 60rpx;
-  line-height: 60rpx;
-  background: #e5004f;
-  color: #fff;
-  font-size: 30rpx;
-  margin-right: 30rpx;
-  border-radius: 30rpx;
-  text-align: center; }
-  .result-button-group {
-    display: flex;
-    position: fixed;
-    bottom: 20rpx;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 40rpx; }
+.result-score {
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #d233d8;
+}
+
+.result-desc {
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #090adb;
+}
+
+.result-nickname {
+  font-size: 60rpx;
+  line-height: 100rpx;
+  color: #f52310;
+}
 
 .result-qrcode {
-  position: fixed;
-  display: flex;
-  bottom: 100rpx;
-  height: 150rpx;
-  width: 100%;
-  box-sizing: border-box;
-  background: darkseagreen;
-  align-items: center; }
-  .result-qrcode-text {
-    font-size: 26rpx;
-    color: #fff;
-    flex: 1;
-    padding-left: 100rpx; }
-  .result-qrcode-image {
-    flex-basis: 150rpx;
-    background: gold;
-    height: 100%; }
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background: #fff;
+  border-radius: 20%;
+  overflow: hidden;
+}
+
+.result-qrcode image {
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.result-qrcode-desc {
+  color: #0f2025;
+  font-size: 24rpx;
+  margin-bottom: 50rpx;
+}
+
+.result-share, .result-retest {
+  font-size: 34rpx;
+  width: 60vw;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #d94625;
+  color: #fff;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+}
+
+.result-retest {
+  background: #efb047;
+}

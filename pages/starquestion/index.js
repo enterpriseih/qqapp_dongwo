@@ -1,4 +1,5 @@
 import request from '../../common/js/request';
+const baseUrl = 'http://47.104.240.249:8085/star-testing/api/v1'
 Page({
     data: {
         questions: [],
@@ -16,17 +17,17 @@ Page({
     },
     getQuestion (id) {
         request({
-            url: 'https://mp.sfansclub.com/h5/knownme/questions',
-            method: 'POST',
-            data: {
-                userToken: '61lD9Y3cd540df215lz',
-                kcId: id
-            }
+            url: `${baseUrl}/question?categoryId=${id}`,
+            method: 'get'
         }).then(res => {
-            setTimeout(() => {
-                this.countDown();
-            }, 500);
-            this.initQuestion(res);
+            if (res.errCode === 0) {
+                setTimeout(() => {
+                    this.countDown();
+                }, 500);
+                this.initQuestion(res);
+            } else {
+                return Promise.reject()
+            }
         }).catch(err => {
             qq.showToast({
                 title: '获取数据异常',
@@ -103,10 +104,11 @@ Page({
      * init questions which from interface
      */
     initQuestion (res) {
-        const questions = res.data.questions.map(item => ({
+        const questions = res.data.map(item => ({
             title: item.question,
-            options: Object.values(item.options),
-            right: item.type
+            options: [item.a, item.b, item.c, item.d],
+            answer: item.answer,
+            score: item.score
         })); 
         this.setData({
             questions: questions,
@@ -115,17 +117,20 @@ Page({
     },
     selectAnswer (e) {
         let index;
-        let right;
+        let answer;
+        let questionScore;
         if (!e) {
             index = 0;
-            right = 1;
+            answer = 1;
+            questionScore = 0;
         } else {
             index = e.currentTarget.dataset.index;
-            right = e.currentTarget.dataset.right;
+            answer = e.currentTarget.dataset.answer;
+            questionScore = e.currentTarget.dataset.score;
         }
         let { score, curqIndex } = this.data;
-        if (index == right) {
-            score += 10;
+        if (index == answer) {
+            score += questionScore;
         }
         if (curqIndex < 9) {
             curqIndex += 1;
@@ -133,7 +138,13 @@ Page({
                 this.startCountDown();
             });
         } else {
-            qq.navigateTo({ url: `/pages/starList/index?score=${score}` });
+            qq.redirectTo({ url: `/pages/result/index?score=${score}` });
+        }
+    },
+    onShareAppMessage () {
+        return {
+          title: '快来测试你的追星等级吧~',
+          path: '/pages/index/index'
         }
     }
 })
